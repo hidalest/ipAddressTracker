@@ -3,8 +3,13 @@
 body {
   width: 100%;
   position: relative;
-  top: 10rem;
+  top: 20rem;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Rubik", sans-serif;
+}
+.main {
+  height: 30rem;
+  position: relative;
+  background-color: whitesmoke;
 }

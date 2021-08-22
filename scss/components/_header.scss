@@ -8,7 +8,7 @@
   text-align: center;
   margin: 0 auto;
   padding-top: 8rem;
-  @include responsiveMax($phone-mini) {
+  @include responsiveMax($phone) {
     background-size: cover;
   }
 
@@ -16,8 +16,9 @@
     font-weight: 500;
     width: 90%;
     margin: 0 auto;
+    margin-top: 4rem;
     text-align: center;
-    @include responsiveMax($phone-mini) {
+    @include responsiveMax($phone) {
       font-size: 2rem;
     }
   }
@@ -28,11 +29,12 @@
     justify-content: center;
     margin: 0 auto;
     margin-top: 2rem;
-    @include responsiveMax($phone-mini) {
+    @include responsiveMax($phone) {
       width: 90%;
     }
     .form--input {
       width: 50rem;
+      box-shadow: 0px 0px 10px rgba($color: $colorPrimaryDark, $alpha: 0.3);
       font-size: 2rem;
       @include responsiveMax($phone-mini) {
         width: 20rem;

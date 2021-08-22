@@ -1,7 +1,7 @@
 $phone-mini: 320px;
-$phone: 766px;
-$table: 900px;
-$table-land: 1200px;
+$phone: 480px;
+$table: 768px;
+$table-land: 1024px;
 $desktop: 1800px;
 
 @mixin responsiveMax($breakpoint) {

@@ -1,0 +1,67 @@
+.pannel {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  padding: 2rem 0;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba($color: $colorPrimaryDark, $alpha: 0.3);
+
+  @include responsiveMin($table) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  @include responsiveMax($phone) {
+    top: 10rem;
+  }
+  @include responsiveMax($phone-mini) {
+    top: 3rem;
+    height: 10rem;
+    overflow-y: scroll;
+  }
+
+  &--info {
+    padding: 1rem;
+    text-align: center;
+    @include responsiveMin($table) {
+      //   border-right: 1px solid rgba($color: $colorPrimaryDark, $alpha: 0.1);
+      text-align: center;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      @include responsiveMax($table) {
+        padding: 1rem;
+      }
+    }
+
+    &:first-child {
+      padding-top: 0;
+      @include responsiveMax($table) {
+        padding: 1rem;
+      }
+    }
+
+    &-title {
+      color: $colorPrimaryGray;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    &-display {
+      font-size: 1.8rem;
+    }
+  }
+}
