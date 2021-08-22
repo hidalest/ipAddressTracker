@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.header {
+  height: 20rem;
+  width: 100%;
+  background: url("/images/pattern-bg.png") no-repeat;
+  background-size: cover;
+  font-size: 3.5rem;
+  color: whitesmoke;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 8rem;
+}
+
+@media (max-width: 20em) {
+  .header {
+    background-size: cover;
+  }
+}
+
+.header--title {
+  font-weight: 500;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 20em) {
+  .header--title {
+    font-size: 2rem;
+  }
+}
+
+.header .form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+@media (max-width: 20em) {
+  .header .form {
+    width: 90%;
+  }
+}
+
+.header .form .form--input {
+  width: 50rem;
+  font-size: 2rem;
+  border: 0;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 20em) {
+  .header .form .form--input {
+    width: 20rem;
+  }
+  .header .form .form--input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .header .form .form--input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .header .form .form--input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .header .form .form--input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+.header .form .form--input::-webkit-input-placeholder {
+  color: #969696;
+  text-transform: capitalize;
+}
+
+.header .form .form--input:-ms-input-placeholder {
+  color: #969696;
+  text-transform: capitalize;
+}
+
+.header .form .form--input::-ms-input-placeholder {
+  color: #969696;
+  text-transform: capitalize;
+}
+
+.header .form .form--input::placeholder {
+  color: #969696;
+  text-transform: capitalize;
+}
+
+.header .form .form--btn {
+  width: 5rem;
+  border: 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #2b2b2b;
+  color: whitesmoke;
+  padding: 2rem;
+}
+
+@media (max-width: 20em) {
+  .header .form .form--btn {
+    padding: 2rem;
+  }
+}
+
+body {
+  width: 100%;
+  position: relative;
+  top: 10rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Rubik", sans-serif;
+}
+/*# sourceMappingURL=main.css.map */

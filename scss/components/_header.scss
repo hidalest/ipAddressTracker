@@ -1,0 +1,68 @@
+.header {
+  height: 20rem;
+  width: 100%;
+  background: url("/images/pattern-bg.png") no-repeat;
+  background-size: cover;
+  font-size: 3.5rem;
+  color: whitesmoke;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 8rem;
+  @include responsiveMax($phone-mini) {
+    background-size: cover;
+  }
+
+  &--title {
+    font-weight: 500;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    @include responsiveMax($phone-mini) {
+      font-size: 2rem;
+    }
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    @include responsiveMax($phone-mini) {
+      width: 90%;
+    }
+    .form--input {
+      width: 50rem;
+      font-size: 2rem;
+      @include responsiveMax($phone-mini) {
+        width: 20rem;
+
+        &::placeholder {
+          font-size: 1rem;
+        }
+      }
+      border: 0;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      padding-left: 1rem;
+
+      &::placeholder {
+        color: $colorPrimaryGray;
+        text-transform: capitalize;
+      }
+    }
+
+    .form--btn {
+      width: 5rem;
+      border: 0;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      background-color: $colorPrimaryDark;
+      color: whitesmoke;
+      padding: 2rem;
+      @include responsiveMax($phone-mini) {
+        padding: 2rem;
+      }
+    }
+  }
+}
