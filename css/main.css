@@ -148,7 +148,7 @@ html {
   color: whitesmoke;
   text-align: center;
   margin: 0 auto;
-  padding-top: 8rem;
+  padding-top: 1rem;
 }
 
 @media (max-width: 30em) {
@@ -290,6 +290,7 @@ html {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    top: 2rem;
   }
 }
 
@@ -352,19 +353,25 @@ html {
   font-size: 1.8rem;
 }
 
+#map {
+  height: 100%;
+}
+
 body {
   width: 100%;
-  position: relative;
-  top: 20rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  height: 100vh;
   font-family: "Rubik", sans-serif;
 }
 
 .main {
-  height: 30rem;
   position: relative;
-  background-color: whitesmoke;
+  z-index: 2;
+}
+
+.mapContainer {
+  position: relative;
+  background: green;
+  z-index: 1;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

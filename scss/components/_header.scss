@@ -7,7 +7,7 @@
   color: whitesmoke;
   text-align: center;
   margin: 0 auto;
-  padding-top: 8rem;
+  padding-top: 1rem;
   @include responsiveMax($phone) {
     background-size: cover;
   }

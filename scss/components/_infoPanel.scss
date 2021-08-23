@@ -16,6 +16,7 @@
   @include responsiveMin($table) {
     flex-direction: row;
     justify-content: space-evenly;
+    top: 2rem;
   }
 
   @include responsiveMax($phone) {

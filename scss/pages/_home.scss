@@ -2,14 +2,23 @@
 
 body {
   width: 100%;
-  position: relative;
-  top: 20rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  //   position: relative;
+  //   top: 10rem;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  height: 100vh;
   font-family: "Rubik", sans-serif;
 }
 .main {
-  height: 30rem;
+  //   height: 30rem;
   position: relative;
-  background-color: whitesmoke;
+  z-index: 2;
+  //   background-color: whitesmoke;
+}
+
+.mapContainer {
+  position: relative;
+  background: green;
+  z-index: 1;
+  height: 100%;
 }
