@@ -22,7 +22,12 @@ class App {
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      this._getInfo(inputIP.value);
+      const regexIp =
+        /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+      if (regexIp.test(inputIP.value))
+        this._getInfo("ipAddress", inputIP.value);
+      else this._getInfo("domain", inputIP.value);
     });
   }
 
@@ -68,9 +73,9 @@ class App {
     });
   }
 
-  _getInfo(ip) {
+  _getInfo(type, data) {
     return this._getJSON(
-      `https://geo.ipify.org/api/v1?apiKey=at_NgGttAYTDFqu165ikDdSyZw5hNeP4&ipAddress=${ip}`
+      `https://geo.ipify.org/api/v1?apiKey=at_NgGttAYTDFqu165ikDdSyZw5hNeP4&${type}=${data}`
     ).then((data) => {
       if (!data) throw new Error("No data found");
       else this._ipInfo = data;
