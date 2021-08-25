@@ -207,6 +207,21 @@ html {
 }
 
 @media (max-width: 30em) {
+  .header .form .form--input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .header .form .form--input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .header .form .form--input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .header .form .form--input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 20em) {
   .header .form .form--input {
     width: 20rem;
   }

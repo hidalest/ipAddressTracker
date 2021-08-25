@@ -37,6 +37,11 @@
       box-shadow: 0px 0px 10px rgba($color: $colorPrimaryDark, $alpha: 0.3);
       font-size: 2rem;
       @include responsiveMax($phone) {
+        &::placeholder {
+          font-size: 1rem;
+        }
+      }
+      @include responsiveMax($phone-mini) {
         width: 20rem;
 
         &::placeholder {
