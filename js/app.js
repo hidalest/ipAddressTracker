@@ -15,10 +15,9 @@ class App {
   _map;
   _marker;
   _ipInfo;
-  _ipFromLocation;
   constructor() {
-    this._getGeolocation();
     this._getInfo("");
+    this._getGeolocation();
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -31,49 +30,44 @@ class App {
     });
   }
 
-  //FIXME delete after done
-  getInfo() {
-    console.log(this._ipInfo);
-    console.log(this._ipInfo.isp);
-    console.log(this._ipInfo.location.region);
-  }
-
   _getGeolocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        console.log(position);
-        const { latitude, longitude } = position.coords;
-        this._renderMap(latitude, longitude); //working!
-      });
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+
+          this._renderMap(latitude, longitude); //working!
+        },
+        function () {
+          swal(
+            "Couln't get your location",
+            "Please check your privacy settings! We need your location services in order to work :)",
+            "error"
+          );
+        }
+      );
     }
   }
 
   _renderMap(lat, lng) {
     const coords = [lat, lng];
-    console.log(lat, lng);
 
-    this._map = L.map("map").setView(coords, 18);
+    this._map = L.map("map").setView(coords, 20);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(this._map);
 
-    // L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-    //   maxZoom: 20,
-    //   subdomains: ["mt0", "mt1", "mt2", "mt3"],
-    // }).addTo(this._map);
-
-    this._marker = L.marker(coords)
-      .addTo(this._map)
-      .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
-      .openPopup();
+    this._marker = L.marker(coords).addTo(this._map);
   }
 
   _getJSON(url) {
+    inputIP.value = "";
     return fetch(url).then((response) => {
-      if (!response.ok)
-        throw new Error(`Response rejected, error ${response.status}`);
+      if (!response.ok) {
+        throw new Error(`${response.status}`);
+      }
       return response.json();
     });
   }
@@ -81,13 +75,21 @@ class App {
   _getInfo(type, data) {
     return this._getJSON(
       `https://geo.ipify.org/api/v1?apiKey=at_NgGttAYTDFqu165ikDdSyZw5hNeP4&${type}=${data}`
-    ).then((data) => {
-      if (!data) throw new Error("No data found");
-      else this._ipInfo = data;
+    )
+      .then((data) => {
+        if (!data) {
+          throw new Error("No data found");
+        } else this._ipInfo = data;
 
-      this._updateMapInfo(data);
-      console.log(data);
-    });
+        this._updateMapInfo(data);
+      })
+      .catch((err) => {
+        swal(
+          `Information entered is not valid, error(${err.message})`,
+          "Please enter a valid IP adress or Domain",
+          "warning"
+        );
+      });
   }
 
   _updateMapInfo(info) {
@@ -95,7 +97,7 @@ class App {
     this._renderInformation(this._ip, this._ipInfo);
 
     //Move the map to the desire location
-    this._map.panTo(new L.LatLng(info.location.lat, info.location.lng), 15);
+    this._map.panTo(new L.LatLng(info.location.lat, info.location.lng), 20);
 
     //Create a marker on the cords of the IP address
     this._marker.setLatLng([info.location.lat, info.location.lng]).update(); // Updates your defined marker position
