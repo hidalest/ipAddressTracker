@@ -17,24 +17,10 @@ class App {
   _marker;
   _ipInfo;
   constructor() {
-    this._getInfo("");
-    this._getGeolocation();
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const regexIp =
-        /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-
-      if (regexIp.test(inputIP.value))
-        this._getInfo("ipAddress", inputIP.value);
-      else this._getInfo("domain", inputIP.value);
-    });
-  }
-
-  _getGeolocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          this._getInfo("");
           const { latitude, longitude } = position.coords;
 
           this._renderMap(latitude, longitude); //working!
@@ -48,6 +34,16 @@ class App {
         }
       );
     }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const regexIp =
+        /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+      if (regexIp.test(inputIP.value))
+        this._getInfo("ipAddress", inputIP.value);
+      else this._getInfo("domain", inputIP.value);
+    });
   }
 
   _renderMap(lat, lng) {
