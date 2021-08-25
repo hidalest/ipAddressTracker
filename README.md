@@ -29,12 +29,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/screenshot1.jpg)
-![](images/screenshot2.jpg)
+![images/screenshot1.png](images/screenshot1.png)
+![images/screenshot2.png](images/screenshot2.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [FrontEndMentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/html5-css-sass-flexbox-vainilla-javascript-leaflet-MpEmqHpAk)
 - Live Site URL: [here](https://github.com/ehidalgo506-dev/TodoApp)
 
 ## My process
