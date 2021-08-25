@@ -64,9 +64,9 @@ This is my second project using OOP, and I starting to feel more comfortable wit
 
 I wanted to add some extra features that I didn't know about for example: Adding a loading spinner when the API is being called, I looked online on how to do it and it was way easier than I thought it would be. Also wanted to implement validation on the input to detect if the input was an IP address or Domain and I find online that Regex is a great option for this (although IPv6 doesn't work).
 
-To see how you can add code snippets, see below:
-
 - Responsive Design Mixins
+
+Proud of this CSS code:
 
 ```css
 $phone-mini: 320px;
@@ -87,7 +87,7 @@ $desktop: 1800px;
 }
 ```
 
-- API call
+Proud of this JS code:
 
 ```js
 
