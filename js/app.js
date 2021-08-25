@@ -4,6 +4,7 @@
 const inputIP = document.querySelector(".form--input");
 const btn = document.querySelector(".form--btn");
 const form = document.querySelector(".form");
+const spinner = document.querySelector(".spinner");
 
 const pannelContainer = document.querySelector(".pannel");
 const showIp = document.querySelector(".pannel--info-ip");
@@ -64,7 +65,9 @@ class App {
 
   _getJSON(url) {
     inputIP.value = "";
+    spinner.classList.remove("hide");
     return fetch(url).then((response) => {
+      spinner.classList.add("hide");
       if (!response.ok) {
         throw new Error(`${response.status}`);
       }

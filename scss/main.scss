@@ -1,10 +1,11 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
+@import "abstracts/gClasses";
 
 @import "base/reset";
 
 @import "components/header";
 @import "components/infoPanel";
 @import "components/map";
-
+@import "components/spinner";
 @import "pages/home";
