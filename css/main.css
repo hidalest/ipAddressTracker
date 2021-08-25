@@ -142,7 +142,7 @@ html {
 .header {
   height: 20rem;
   width: 100%;
-  background: url("/images/pattern-bg.png") no-repeat;
+  background: url("../images/pattern-bg.png") no-repeat;
   background-size: cover;
   font-size: 3.5rem;
   color: whitesmoke;
