@@ -1,110 +1,144 @@
-# Frontend Mentor - IP address tracker
+# Frontend Mentor - IP address tracker solution
 
-![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this IP Address Tracker app and get it looking as close to the design as possible. To get the IP Address locations, you'll be using the [IP Geolocation API by IPify](https://geo.ipify.org/). To generate the map, we recommend using [LeafletJS](https://leafletjs.com/).
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
 - See their own IP address on the map on the initial page load
 - Search for any IP addresses or domains and see the key information and location
 
----
+### Screenshot
 
-⚠️ **IMPORTANT** ⚠️: To use the IP Geolocation API by IPify, you'll need to sign up for a free account. You won't need to add any cards details to do this and it's a very quick process. This will generate an API Key for you. Usually, you would be able to restrict your API Key to a specific URL (your own domain). This makes sure that other people can't use your API Key on their own websites. IPify doesn't have this feature, but because you aren't adding your card details, this isn't an issue. **So be sure to only sign up for the free account and DO NOT enter any card details**.
+![](images/screenshot1.jpg)
+![](images/screenshot2.jpg)
 
-For the mapping API, we recommend using [LeafletJS](https://leafletjs.com/). It's free to use and doesn't require an API Key. If you decide to use another API, like Google Maps or Mapbox, be sure to secure your API Key. Here are guides for both Google Maps and Mapbox, be sure to read through them thoroughly:
+### Links
 
-- [API Key best practices from Google Developers](https://developers.google.com/maps/api-key-best-practices)
-- [How to use Mapbox securely](https://docs.mapbox.com/help/troubleshooting/how-to-use-mapbox-securely/)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [here](https://github.com/ehidalgo506-dev/TodoApp)
 
-Exposing your API Key publicly can lead to other people using it to make requests for their own application if the proper precautions aren't in place. Please be sure you read the guides thoroughly and follow their recommendations.
+## My process
 
-**We don't take any responsibility if you expose your API Key while completing the challenge and have not secured it.**
+I started by doing a flow chart on how and what does the application should do, this overview of the application helps me divide the problem into small problems allowing me to focus on them instead of thinking of the whole project as one big problem.
 
----
+After I have my flowchart and start adding all the tools necessary and planning the SASS files as well as creating the HTML structure that the application will have. After that start coding!!! <3
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Built with
 
-## Where to find everything
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- SCSS
+- Vainilla JS
+- Leaflet (for mapping)
+- Loading.css (for loading spinner animation).
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### What I learned
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+This project was awesome, although it was hard it helped develop my investigations skills.
+This was the first project with Geolocation and mapping features, I had to read a LOT the documentation of Leaflet, search on blogs, and look at youtube videos. Also, I learned API calls with promises a little bit ago and since in this project we needed to use an API for the IP address then it was an awesome opportunity to practice this.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+This is my second project using OOP, and I starting to feel more comfortable with this, although I still have some scoping issues I felt better than my last project (ToDo app).
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+I wanted to add some extra features that I didn't know about for example: Adding a loading spinner when the API is being called, I looked online on how to do it and it was way easier than I thought it would be. Also wanted to implement validation on the input to detect if the input was an IP address or Domain and I find online that Regex is a great option for this (although IPv6 doesn't work).
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+To see how you can add code snippets, see below:
 
-## Building your project
+- Responsive Design Mixins
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```css
+$phone-mini: 320px;
+$phone: 480px;
+$table: 768px;
+$table-land: 1024px;
+$desktop: 1800px;
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+@mixin responsiveMax($breakpoint) {
+  @media (max-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}
+@mixin responsiveMin($breakpoint) {
+  @media (min-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}
+```
 
-## Deploying your project
+- API call
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```js
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+    _getJSON(url) {
+    inputIP.value = "";
+    spinner.classList.remove("hide");
+    return fetch(url).then((response) => {
+      spinner.classList.add("hide");
+      if (!response.ok) {
+        throw new Error(`${response.status}`);
+      }
+      return response.json();
+    });
+  }
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+  _getInfo(type, data) {
+    return this._getJSON(
+      `https://geo.ipify.org/api/v1?apiKey=at_NgGttAYTDFqu165ikDdSyZw5hNeP4&${type}=${data}`
+    )
+      .then((data) => {
+        if (!data) {
+          throw new Error("No data found");
+        } else this._ipInfo = data;
 
-## Create a custom `README.md`
+        this._updateMapInfo(data);
+      })
+      .catch((err) => {
+        swal(
+          `Information entered is not valid, error(${err.message})`,
+          "Please enter a valid IP adress or Domain",
+          "warning"
+        );
+      });
+  }
+};
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### Continued development
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+I still need to practice my scoping, doing this project I was stuck on some points due to the "this" keyword was not pointing to the right object. Need to read more documentation to understand it better.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+I noticed that regex is pretty useful, still, I don't feel comfortable using them so I will read more documentation on its basics and different scenarios.
 
-## Submitting your solution
+Much to improve and more to practice
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Useful resources
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- [Leaflet Docs](https://leafletjs.com/reference-1.7.1.html) - Sometimes they are confusing to understand but I by reading careful I was able to accomplish some desire features of the project with their documentation.
+- [Stackoverflow](https://stackoverflow.com/) - Whenever I have a random question, issue, etc. This is where I go and youtube.
 
-## Sharing your solution
+## Author
 
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
-# ipAddressTracker
+- Github Profile - [ehidalgo506-dev](https://github.com/ehidalgo506-dev)
+- Frontend Mentor - [@ehidalgo506-dev](https://www.frontendmentor.io/profile/ehidalgo506-dev)
