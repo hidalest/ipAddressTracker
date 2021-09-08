@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FrontEndMentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/html5-css-sass-flexbox-vainilla-javascript-leaflet-MpEmqHpAk)
-- Live Site URL: [here](https://github.com/ehidalgo506-dev/TodoApp)
+- Live Site URL: [https://ehidalgo506-dev.github.io/ipAddressTracker/](https://ehidalgo506-dev.github.io/ipAddressTracker/)
 
 ## My process
 
