@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FrontEndMentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/html5-css-sass-flexbox-vainilla-javascript-leaflet-MpEmqHpAk)
-- Live Site URL: [https://ehidalgo506-dev.github.io/ipAddressTracker/](https://ehidalgo506-dev.github.io/ipAddressTracker/)
+- Live Site URL: [https://hidalest.github.io/ipAddressTracker/](https://hidalest.github.io/ipAddressTracker/)
 
 ## My process
 
@@ -140,5 +140,5 @@ Much to improve and more to practice
 
 ## Author
 
-- Github Profile - [ehidalgo506-dev](https://github.com/ehidalgo506-dev)
-- Frontend Mentor - [@ehidalgo506-dev](https://www.frontendmentor.io/profile/ehidalgo506-dev)
+- Github Profile - [hidalest](https://github.com/hidalest)
+- Frontend Mentor - [@hidalest](https://www.frontendmentor.io/profile/hidalest)
